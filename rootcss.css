@@ -1,0 +1,6 @@
+.root {
+    height: 600px;
+    width: 600px;
+    background: radial-gradient(circle, rgba(78, 67, 178, 0.15), transparent 50%);
+    position: absolute;
+}
