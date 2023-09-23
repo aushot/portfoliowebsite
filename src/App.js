@@ -7,7 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 function Title() {
     return (
         <div className="Title">
-            <h1>Marco Maraglino</h1>
+            <h1>Marco Get Maraglino</h1>
             <p>Software Engineer</p>
             <p className="planding">Craft exceptional digital experiences that stand out in the digital landscape</p>
             <div>
