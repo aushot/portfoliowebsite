@@ -1,6 +1,6 @@
 import "./App.css"
 import React, {useEffect, useRef, useState} from "react";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import Fade from 'react-reveal/Fade';
 
 
 
@@ -22,7 +22,7 @@ function Title() {
 function Experiences() {
     return (
         <div className="experiences">
-            <div className="title"><h1>Experiences</h1></div>
+            <h1>Experiences</h1>
         <div className="grid-container">
             <div className="duration1"><p>2022 - present</p></div>
             <div className="secondtitle1"><p>Bachelor degree - Politecnico of Bari</p></div>
@@ -63,7 +63,7 @@ function App() {
 
                 setMouseCoordinates( {
                     x: ev.pageX,
-                    y: ev.pageX
+                    y: ev.pageY
                 })
 
                 const color = getComputedStyle(document.documentElement).getPropertyValue('--x');
@@ -98,6 +98,11 @@ function App() {
             <div className="wrapper">
                 <div ref={heroRef} id="App" className="App">
                     <Title></Title>
+                    <div className="socialnetwork-mobile">
+                        <a href="https://www.instagram.com/marcomaraglino" target="_blank" className="instagram"><i className="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/marcomaraglino5/" target="_blank" className="linkedin"><i className="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/aushot" target="_blank" className="github"><i className="fa fa-github"></i></a>
+                    </div>
                     <About></About>
                     <Experiences></Experiences>
                 </div>
