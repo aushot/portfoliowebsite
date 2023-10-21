@@ -1,6 +1,7 @@
 import "./App.css"
 import React, {useEffect, useRef, useState} from "react";
-import Fade from 'react-reveal/Fade';
+import {BrowserRouter} from "react-router-dom";
+import {HashLink as Link} from 'react-router-hash-link';
 
 
 
@@ -11,8 +12,10 @@ function Title() {
             <p>Software Engineer</p>
             <p className="planding">Craft exceptional digital experiences that stand out in the digital landscape</p>
             <div>
-                <button className="primary">Hire Me</button>
-                <a href="#" className="aboutme">About me</a>
+                <BrowserRouter>
+                    <button className="primary">Hire Me</button>
+                    <Link to="#about"><a href="#about" className="aboutme">About me</a></Link>
+                </BrowserRouter>
             </div>
 
         </div>
@@ -27,25 +30,22 @@ function Experiences() {
             <div className="duration1"><p>2022 - present</p></div>
             <div className="secondtitle1"><p>Bachelor degree - Politecnico of Bari</p></div>
             <div className="paragraph1">
-                <p>Gained proficiency in programming languages like Python, Java, and C++, as well as mastered the art of software design and architecture. I've delved into data structures and algorithms, enabling me to create efficient and robust solutions to complex problems.
+                <p>
+                    Gained a solid understanding of core computer science principles, including programming, data structures, and algorithms.
+                    Throughout my academic journey, I honed problem-solving abilities, critical thinking, and teamwork, essential competencies for a successful career in the field of computer engineering.
                 </p>
                 </div>
         </div>
             <div className="grid-container">
-                <div className="duration1"><p>2019 - 2021</p></div>
-                <div className="secondtitle1"><p>Software Development Internship - XYZ Tech Solutions</p></div>
+                <div className="duration1"><p>2017 -2022</p></div>
+                <div className="secondtitle1"><p>High School Diploma - Technical Institute, Computer Science</p></div>
                 <div className="paragraph1">
                     <p>
-                        Collaborated with a cross-functional team to develop and optimize a customer-facing web application. Assisted in debugging and troubleshooting software issues, leading to a 20% improvement in application performance
-                    </p>
-                </div>
-            </div>
-            <div className="grid-container">
-                <div className="duration1"><p>2017 - 2019</p></div>
-                <div className="secondtitle1"><p>Freelance Web Development Projects</p></div>
-                <div className="paragraph1">
-                    <p>
-                        Worked as a freelance web developer, collaborating with small businesses to design and develop responsive websites. Managed project timelines, client communication, and delivered tailored solutions to meet client objectives.
+                        Analysis, design, and implementation of complex databases. Development of dynamic web portals and websites. Creation of basic applications and software with user interfaces.
+                        Describing and comparing the operation of electronic and telecommunication devices and tools.
+                        Configuring, installing, and managing data processing systems and networks.
+                        Developing computer applications for local networks or remote services.
+                        Further specialization in the analysis, comparison, and design of computer devices and tools, as well as the development of computer applications.
                     </p>
                 </div>
             </div>
@@ -82,11 +82,10 @@ function App() {
     }, []);
 
     function About() {
-        return(<div className="about">
+        return(
+            <div className="about" id="about">
             <h1>About</h1>
-            <p>Quisque lacus tellus, consectetur ac interdum non, condimentum vulputate lacus. Aliquam sem elit, tempus aliquet ultrices at, hendrerit sed arcu. Morbi condimentum aliquet dolor eu commodo. Morbi vestibulum nisl vitae sapien tristique varius.</p>
-            <p>Praesent vel tortor id purus molestie molestie et in elit. Proin suscipit lectus ac ligula rutrum, at fringilla purus laoreet. Ut dolor metus, congue eget quam in, tempor finibus nibh. Nulla ac elit lacus. Quisque mollis dictum nunc, vitae ultrices elit lobortis a. Proin velit ligula, sodales ac ante nec, vehicula placerat mauris.</p>
-            <p>Nunc diam augue, feugiat eget placerat sit amet, mattis nec diam. Etiam sit amet efficitur magna. Morbi eros neque, hendrerit et urna eget, porttitor fermentum ex. Vivamus quis leo non tellus aliquet aliquet.</p>
+            <p>I'm a dedicated programmer driven by a relentless curiosity for learning, a passion for problem-solving, and an insatiable thirst for new experiences. With a deep love for coding and a penchant for exploration, I'm constantly pushing the boundaries of what's possible in the world of technology. Join me on my journey as I embrace challenges, seek innovation, and uncover exciting new horizons</p>
         </div>)
     }
 
