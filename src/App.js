@@ -13,7 +13,7 @@ function Title() {
             <p className="planding">Craft exceptional digital experiences that stand out in the digital landscape</p>
             <div>
                 <BrowserRouter>
-                    <button className="primary">Hire Me</button>
+                    <a href="mailto:marcomaraglino5@gmail.com"><button className="primary">Hire Me</button></a>
                     <Link to="#about"><a href="#about" className="aboutme">About me</a></Link>
                 </BrowserRouter>
             </div>
