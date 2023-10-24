@@ -66,11 +66,9 @@ function App() {
                     y: ev.pageY
                 })
 
-                const color = getComputedStyle(document.documentElement).getPropertyValue('--x');
                 document.documentElement.style.setProperty('--x', pageX + "px");
                 document.documentElement.style.setProperty('--y', pageY + "px");
 
-                console.log(ev.pageX, ev.pageY)
 
             }
 
