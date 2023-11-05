@@ -8,14 +8,12 @@ import {HashLink as Link} from 'react-router-hash-link';
 function Title() {
     return (
         <div className="Title">
-            <h1>Marco Maraglino</h1>
             <p>Software Engineer</p>
+            <h1>Marco Maraglino</h1>
             <p className="planding">Craft exceptional digital experiences that stand out in the digital landscape</p>
             <div>
-                <BrowserRouter>
                     <a href="mailto:marcomaraglino5@gmail.com"><button className="primary">Hire Me</button></a>
-                    <Link to="#about"><a href="#about" className="aboutme">About me</a></Link>
-                </BrowserRouter>
+                    <a href="#about" className="aboutme">About me</a>
             </div>
 
         </div>
