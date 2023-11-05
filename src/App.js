@@ -1,7 +1,5 @@
 import "./App.css"
 import React, {useEffect, useRef, useState} from "react";
-import {BrowserRouter} from "react-router-dom";
-import {HashLink as Link} from 'react-router-hash-link';
 
 
 
@@ -94,9 +92,9 @@ function App() {
                 <div ref={heroRef} id="App" className="App">
                     <Title></Title>
                     <div className="socialnetwork-mobile">
-                        <a href="https://www.instagram.com/marcomaraglino" target="_blank" className="instagram"><i className="fa fa-instagram"></i></a>
-                        <a href="https://www.linkedin.com/in/marcomaraglino5/" target="_blank" className="linkedin"><i className="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/aushot" target="_blank" className="github"><i className="fa fa-github"></i></a>
+                        <a href="https://www.instagram.com/marcomaraglino" target="_blank" className="instagram" rel="noreferrer"><i className="fa fa-instagram"></i></a>
+                        <a href="https://www.linkedin.com/in/marcomaraglino5/" target="_blank" className="linkedin" rel="noreferrer"><i className="fa fa-linkedin"></i></a>
+                        <a href="https://github.com/aushot" target="_blank" className="github" rel="noreferrer"><i className="fa fa-github"></i></a>
                     </div>
                     <About></About>
                     <Experiences></Experiences>
