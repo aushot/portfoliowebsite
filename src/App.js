@@ -94,7 +94,7 @@ function App() {
                     <div className="socialnetwork-mobile">
                         <a href="https://www.instagram.com/marcomaraglino" target="_blank" className="instagram" rel="noreferrer"><i className="fa fa-instagram"></i></a>
                         <a href="https://www.linkedin.com/in/marcomaraglino5/" target="_blank" className="linkedin" rel="noreferrer"><i className="fa fa-linkedin"></i></a>
-                        <a href="https://github.com/aushot" target="_blank" className="github" rel="noreferrer"><i className="fa fa-github"></i></a>
+                        <a href="https://github.com/marcomaraglino" target="_blank" className="github" rel="noreferrer"><i className="fa fa-github"></i></a>
                     </div>
                     <About></About>
                     <Experiences></Experiences>
