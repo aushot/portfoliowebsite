@@ -33,7 +33,7 @@ function Experiences() {
                 </div>
         </div>
             <div className="grid-container">
-                <div className="duration1"><p>2017 -2022</p></div>
+                <div className="duration1"><p>2017 - 2022</p></div>
                 <div className="secondtitle1"><p>High School Diploma - Technical Institute, Computer Science</p></div>
                 <div className="paragraph1">
                     <p>
