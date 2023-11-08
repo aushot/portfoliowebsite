@@ -79,7 +79,6 @@ body {
   margin: 0;
   font-family: 'Inter', sans-serif;
   color: white;
-  max-width: 1500px;
   background-color: black;
   background-image: url( '/Users/marcomaraglino/Downloads/Animated Shape.svg' );
   background-repeat: repeat;
@@ -183,7 +182,7 @@ body {
   position: absolute;
 }
 .App {
-  height: 2400px;
+  height: 300vh;
   margin: 0;
   background-image: radial-gradient(
           circle farthest-side at var(--x, 20px) var(--y),
