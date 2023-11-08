@@ -1,8 +1,25 @@
 import "./App.css"
 import React, {useEffect, useRef, useState} from "react";
 
-
-
+function FadeInSection(props) {
+    const [isVisible, setVisible] = React.useState(true);
+    const domRef = React.useRef();
+    React.useEffect(() => {
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => setVisible(entry.isIntersecting));
+        });
+        observer.observe(domRef.current);
+        return () => observer.unobserve(domRef.current);
+    }, []);
+    return (
+        <div
+            className={`fade-in-section ${isVisible ? 'is-visible' : ''}`}
+            ref={domRef}
+        >
+            {props.children}
+        </div>
+    );
+}
 function Title() {
     return (
         <div className="Title">
@@ -48,6 +65,13 @@ function Experiences() {
             </div>
     );
 }
+function About() {
+    return(
+        <div className="about" id="about">
+            <h1>About</h1>
+            <p>I'm a dedicated programmer driven by a relentless curiosity for learning, a passion for problem-solving, and an insatiable thirst for new experiences. With a deep love for coding and a penchant for exploration, I'm constantly pushing the boundaries of what's possible in the world of technology. Join me on my journey as I embrace challenges, seek innovation, and uncover exciting new horizons</p>
+        </div>)
+}
 
 function App() {
     const [mouseCoordinates, setMouseCoordinates] = useState({x:0, y:0});
@@ -75,17 +99,6 @@ function App() {
             }
     }, []);
 
-    function About() {
-        return(
-            <div className="about" id="about">
-            <h1>About</h1>
-            <p>I'm a dedicated programmer driven by a relentless curiosity for learning, a passion for problem-solving, and an insatiable thirst for new experiences. With a deep love for coding and a penchant for exploration, I'm constantly pushing the boundaries of what's possible in the world of technology. Join me on my journey as I embrace challenges, seek innovation, and uncover exciting new horizons</p>
-        </div>)
-    }
-
-
-
-
     return (
         <>
             <div className="wrapper">
@@ -96,7 +109,8 @@ function App() {
                         <a href="https://www.linkedin.com/in/marcomaraglino5/" target="_blank" className="linkedin" rel="noreferrer"><i className="fa fa-linkedin"></i></a>
                         <a href="https://github.com/marcomaraglino" target="_blank" className="github" rel="noreferrer"><i className="fa fa-github"></i></a>
                     </div>
-                    <About></About>
+                    <About>
+                    </About>
                     <Experiences></Experiences>
                 </div>
             </div>
